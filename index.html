@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Manage App | FrontEnd Mentors</title>
+    <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+    <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
   </head>
   <body>
     <header class="primary-header">
@@ -19,8 +21,8 @@
                 <use xlink:href="images/logo.svg#logo"></use>
               </svg>             </a>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-          <img class="icon-hamburger" src="images/icon-hamburger.svg" alt="" aria-hidden="true">
-          <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true">
+          <!-- <img class="icon-hamburger" src="images/icon-hamburger.svg" alt="" aria-hidden="true">
+          <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true"> -->
           <span class="visually-hidden">Menu</span>
         </button>
         <nav class="primary-navigation">
@@ -38,7 +40,7 @@
     </header>
 
     <main>
-      <section class="padding-block-900">
+      <section class="hero | text-center-sm-only padding-block-900">
         <div class="container">
           <div class="even-columns">
             <div class="flow">
@@ -48,16 +50,17 @@
               <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
               <button class="button">Get Started</button>
             </div>
-            <div>
+            <div class="hero__image">
               <img src="images/illustration-intro.svg" alt="">
             </div>
           </div>
         </div>
       </section>
-      <section class="padding-block-900">
+
+      <section class="sales-points | padding-block-900">
         <div class="container">
           <div class="even-columns">
-            <div class="flow text-center-sm-only margin-bottom-700" style="--flow-spacer: 1.5rem">
+            <div class="sales-points__blog | flow text-center-sm-only margin-bottom-700" style="--flow-spacer: 1.5rem">
               <h2 class="fs-secondary-heading fw-bold">
                 What's different about Manage?
               </h2>
@@ -109,15 +112,62 @@
       </section>
         
         <!-- carousel -->
-      <section class="carousel | padding-block-700">
-        <h2 class="fs-secondary-heading fw-bo">
+      <section class="carousel | padding-block-900 text-center">
+        <h2 class="fs-secondary-heading fw-bold">
           What they've said
         </h2>
         <!-- corousel here -->
+        <ul class="slider">
+          <li>
+            <img src="images/avatar-anisha.png" alt="">
+  
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Anisha Li</h3>
+              <p data-width="wide">“Manage has supercharged our team’s workflow. The ability to maintain visibility on
+                larger milestones at all times keeps
+                everyone motivated.”</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/avatar-ali.png" alt="">
+  
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Ali Bravo</h3>
+              <p data-width="wide">“We have been able to cancel so many other subscriptions since using Manage. There is
+                no
+                more cross-channel
+                confusion
+                and everyone is much more focused.”</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/avatar-richard.png" alt="">
+  
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Richard Watts</h3>
+              <p data-width="wide">“Manage allows us to provide structure and process. It keeps us organized and focused.
+                I
+                can’t stop recommending them to
+                everyone I talk to!” </p>
+            </div>
+          </li>
+          <li>
+            <img src="images/avatar-shanai.png" alt="">
+  
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Shanai Gough</h3>
+              <p data-width="wide">“Their software allows us to track, manage and collaborate on our projects from
+                anywhere.
+                It keeps the whole team
+                in-sync without being intrusive.” </p>
+            </div>
+          </li>
+        </ul>
+
         <button class="button">Get Started</button>
       </section>
 
-      <section class="cta | padding-block-700 bg-accent-400 text-neutral-100">
+      <section class="cta | margin-top-900  padding-block-700 bg-accent-400 text-neutral-100">
         <div class="container">
           <div class="even-columns vertical-align-center">
               <p class="fs-primary-heading fw-bold"> Simplify how your team works today. </p>
@@ -132,9 +182,8 @@
 
       <footer class="primary-footer | bg-neutral-900 padding-block-700 text-neutral-100">
         <div class="container">
-          <div class="primary-footer-wrapper">
-            <div class="primary-footer-logo-social">
-              <a href="#" aria-label="home">
+          <div class="primary-footer__wrapper">
+              <a class="primary-footer__logo" href="#" aria-label="home">
                 <svg class="logo" width="146" height="24">
                   <use xlink:href="images/logo.svg#logo"></use>
                 </svg>
@@ -161,8 +210,8 @@
                     <use xlink:href="social-icons.svg#icon-youtube"></use></svg>
                 </a></li>
               </ul>
-            </div>
-            <div class="primary-footer-nav">
+            
+            <div class="primary-footer__nav-wrapper">
               <nav class="footer-nav">
                 <ul class="flow" style="--flow-spacer: 1em" aria-label="footer" role="list">
                   <li><a href="#">Home</a></li>
@@ -175,14 +224,13 @@
                 </ul>
               </nav>
             </div>
-            <div class="primary-footer-form">
-              <form action="">
+
+            <!-- <div class="primary-footer-form"> -->
+              <form class="primary-footer__form" action="">
                 <input type="email"><button class="button" data-shdow="none">Go</button>
               </form>
-              <div>
-                <p>Copyright 2020. All Rights Reserved</p>
-              </div>
-            </div>
+                <p class="primary-footer__copyright">Copyright 2020. All Rights Reserved</p>
+            <!-- </div> -->
         </div>
       </footer>
 
